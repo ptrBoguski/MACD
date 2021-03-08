@@ -1,2 +1,2 @@
 # MACD
-stock market profits simulation using the MACD indicator
+stock market simulation using the MACD indicator
