@@ -2,7 +2,6 @@ import MACD as ptr
 import All_In_Alg
 import Test_Alg
 import numpy as np
-import sys
 import pandas as pd
 from matplotlib import pyplot as plt
 
@@ -44,11 +43,11 @@ buy = []
 for i in range(0, period - 2):
     if (MACD[i + 1] < signal[i + 1]):
         if (MACD[i] > signal[i]):
-            # if(signal[i + 1] < signal [ i]): # czy sygnal malejacy
+            # if(signal[i + 1] < signal [ i]): # check if signal descending
             sell.append(i + 1)
     elif (MACD[i + 1] > signal[i + 1]):
         if (MACD[i] < signal[i]):
-            # if(signal[i + 1] > signal [i]): # czy sygnal rosnacy
+            # if(signal[i + 1] > signal [i]): # check if signal ascending
             buy.append(i + 1)
 
 n_w = np.array(stock_norm)
